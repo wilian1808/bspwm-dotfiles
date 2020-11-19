@@ -65,6 +65,8 @@ h1 {
    margin-right: 13%;
     background-color: #222831 ;
     color:  white;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); 
+
   } 
 
 
@@ -85,4 +87,15 @@ h1 {
 
   .btns:hover {
         box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); 
+  }
+
+  .sx {
+    margin-top: 3%;
+    display: flex; 
+    justify-content: center;
+     
+
+  }
+  .sxx {
+       border: 3px solid #f9813a ;
   }
