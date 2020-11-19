@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title> bspwm tutorial</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="flextest"> 
+      <div class="content">
+        <h1> Bspwm Tutorial </h1>
+          <div class="cover"> <img class="Coverimg" src="screenshots/cover.png">  </div>
+
+          <div class="mainContent">
+      <p class="disclaimer">  This tutorial is clearly aimed for beginners only for getting started with window managers and I apologize for not making 
+          this in my github repo's readme since I dont know how to make the readme look non-messy/clean , to go on with this tutorial
+          you will need my configs and those are in this <a href="https://github.com/siduck76/bspwm-dotfiles ">repo. </a> </p>
+          </div>
+
+
+
+          <div class="steps"> 
+            <h1>Installing and setting up bspwm </h1>
+            <p class="captions"> bspwm is simple , it just needs 2 config files :  1) bspwmrc 2) sxhkdrc . Install the packages for your distro : </p> 
+
+            <div class="distroBtns"> 
+              <button onclick="arch();" class="btns" type="button"> Arch based </button>
+              <button onclick="deb();"  class="btns"  type="button"> Debian based</button>
+              <button  onclick="fed();"  class="btns" type="button"> fedora </button>
+              <button onclick="voidd();"  class="btns"  type="button"> void </button>
+
+            </div> 
+            <p class="commands"> sudo pacman -S bspwm sxhkd maim xclip picom ttf-font-awesome    </p>
+            
+          </div>
+        
+      </div>
+    
+    </div> 
+
+    <script src="script.js"> </script>
+  </body>
+
+</html>
