@@ -36,7 +36,7 @@
           <h1>Installing and setting up bspwm</h1>
           <p class="captions">
             bspwm is simple , it just needs 2 config files : 1) bspwmrc 2)
-            sxhkdrc . Install the packages for your distro :
+            sxhkdrc . Install the packages for your distro : ( click the buttons below )
           </p>
 
           <div class="distroBtns">
@@ -50,7 +50,7 @@
             <button onclick="voidd();" class="btns" type="button">void</button>
           </div>
           <p class="commands">
-            sudo pacman -S feh bspwm sxhkd maim xclip picom ttf-font-awesome
+            sudo pacman -S feh bspwm sxhkd maim xclip picom ttf-font-awesome rofi 
           </p>
         </div>
         <p class="captions">clone my repo for the configs :</p>
@@ -65,7 +65,7 @@
           browser's run command in the bspwmrc file , like for firefox you would
           have to add firefox & at the end of the bspwmrc file !. <br /><br />
           Now the second file which is sxhkdrc is needed for keybinds ( keyboard
-          shortcuts ) like if you want if to open terminal by mod ( windows key
+          shortcuts ) from my config example :  like if you want if to open terminal by Super which is also called Mod or Mod4 in some window managers ( windows key
           ) + enter then you would have to specify it in the sxhkdrc file.
           example : <br />
         </p>
@@ -85,7 +85,7 @@
           # copy the bspwmrc file to bspwm folder and sxhkdrc file to the sxhkd
           folder <br />
           <br />
-          chmod +x bspwmrc ( this is important since it runs whole system )
+          chmod +x bspwmrc ( this is important since bspwmrc  runs everything in bspwm )
         </p>
         <br />
 
@@ -120,7 +120,7 @@
         <p class="commands">
           copy the picom folder from my ( cloned repo ) to your ~/.config folder
           , that .config folder ends with a dot [ period ] so its hidden , type
-          ctrl + h to view it
+          ctrl + h to view it.
         </p>
         <br />
         <br />
@@ -136,12 +136,12 @@
           and rofi is an application launcher , so pressing Mod + enter will
           open up xst terminal and so on .The 3rd and 4th commands are for
           reloading the configs , so after every change you make in sxhkrc or
-          bspwmrc file you have to reload their configs! just replace xst with
+          bspwmrc file you have to reload their configs!( super + shift + e to restart bspwm and super + shift + r to reload sxhkdrc! ) just replace xst with
           any terminal ( from the sxhdkrc file ) you like and the rest of the
           commands are for controlling brightness and  quit bspwm / restart / closing / kill windows.
           <br> 
-
-          give a quick reading to the sxhkdrc file and try to figure out the keybinds . Basic keybinds :
+          <br>
+          # give a quick reading to the sxhkdrc file and try to figure out the keybinds . Basic keybinds :
           <br> 
         </p>
         <p class="commands" style="font-family: 'Fira Code', monospace;
@@ -151,8 +151,60 @@ Super  + enter  &nbsp;  &emsp;&emsp;  -->  open terminal <br><br>
         Super + C  &emsp;   &emsp;&emsp;   &emsp;     -->                 open rofi app launcher <br> <br> 
         Super + shift + q  &nbsp;   &nbsp;    -->       close windows <br><br> 
         Super + f    &nbsp;    &emsp;&emsp;    &emsp;&emsp;     -->               fullscreen <br><br>  
-        Super + d     &nbsp;  &emsp;&emsp;&emsp;  &nbsp;&nbsp;  -->                exit fullscreen <br<br>>
+        Super + d     &nbsp;  &emsp;&emsp;&emsp;  &nbsp;&nbsp;  -->                exit fullscreen <br<br>
         </p>
+        <br>
+        <p class="captions"> # Now lets check the bspwmrc file </p>
+        <div class="sx" >  <img style="border:5px solid #fbbedf;" src="screenshots/bsp.png"> </div><br> 
+        <p class="captions"> # Anything you write in this file ( its a script actually ) will be executed when you start bspwm !<br><br> So
+        the first line , which is sxhkd starts sxhkd ( daemon ) which will enable all the keyboard shortcuts . and the next ones 
+        are just for setting wallpaper , picom , and xresources theme ( this is used for setting colors/fonts for some terminals ) .<br><br>
+      #  The next few lines are for setting window border color / width / window  gap size /  and adding new rules to bspwm which means 
+        the app you want will be opened in the specifc workspace ( in floating mode or any mode you want )in this case gimp will be 
+        opened in the workspace 8 and it will be set to floating automatically. there are 10 workspaces in bspwm . <br> 
+        <br> # The bspc config top padding thing in the bottom line is just for adding padding on your top screen so it'd make 
+        some space for the panel or such.<br> <br>
+       
+        # I think you should be familiar with the two files : bspwmrc and sxhkdrc so make a keybind for opening any browser in 
+        the sxhdkrc file , when done proceed to the following section.<br> <br> 
+
+        # Bspwm doesnt come with any panel / bar by default so you have to add it . We'll be using polybar in this section . Download
+        polybar package for your distro !.
+
+        <p class="commands"> # Now copy my polybar folder ( from my repo ofc ) to your ~/.config folder or you can use the default 
+        polybar and configure it yourself. <br><br>
+        # To use the default polybar config : <br> <br>
+        mkdir ~/.config/polybar   (this will make polybar folder) <br> <br> 
+        cp -r /usr/local/share/doc/polybar/config ~/.config/polybar  ( this will copy the default polybar config ) <br><br>
+        If the above command doesnt work then : <br> <br> 
+        cp -r /usr/share/doc/polybar/config ~/.config/polybar <br><br> </p>
+        <p class="captions"> #   If you used the default polybar config then you should be able to run it by : polybar barname , in the default config case
+        the barname is example , so add this : polybar example , to your bspwmrc file so polybar runs after startup automatically . </p>
+        <p style="text-align: center; font-weight: bolder;">  OR </p>
+
+        <p class="captions"> # If you used my polybar config then , simply add this in your bspwmrc : ~/.config/polybar/launch.sh <br><br>
+         My polybar config has two files : config and launch.sh . the config file has all the modules , fonts etc stuffs and the launch.sh
+         file just reads the polybar barname from the config file and runs it . <br> <br>
+
+         # If some fonts on polybar ( my config ) dont work then probably you need to install fontawesome5 fonts  and  <a href="https://github.com/siduck76/matfonts"> fonts</a> used by my polybar. Just put all the files from my font repo to your ~/.local/share/fonts folder and then do : fc-cache -fv . If there's no fonts folder then create it ! .
+         <br> <br> 
+         # If the wifi module doesnt work on the polybar then check your wlan interface's name ( type iwconfig to know it ) and replace it with mine under config .
+         <div class="sx"><img style="border : 2px solid #aee6e6; " src="screenshots/wla.png"> </div>
+        
+        </p><br>
+    <!--    <div style="display: flex; justify-content: center;" --> 
+        <p class="captions" style="  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+   0px 6px 6px rgba(0, 0, 0, 0.23); background-color: #aee6e6; border : 3px solid #706897     ;padding: 2%; margin-left: 13%; margin-right: 13%;"> # Now lets apply the terminal theme . In this tutorial we'll be using xresources which is config file used to set colors / fonts for urxvt / xterm and other terminals . 
+        I use ST  with xresources patch , copy the st folder somewhere and  run these : cd stfolder ,  make && sudo make install . This will install
+        st to the system. <br> <br>
+        # Put the xresources  in any folder you want and run : xrdb merge Xresources . copy the xrdb command you just executed to 
+        your bspwmrc file . <br> <br>
+        # Copy my rofi folder ( from repo ) to your ~/.config folder</p>
+        </p>
+        <br><br>
+        <p class="captions"> -> If you face any issues with this tutorial then contact me at my telegram  <a href="https://t.me/DE_WM"> group</a></p>
+        
+
       </div>
     </div>
     <br />

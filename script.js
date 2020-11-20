@@ -1,11 +1,11 @@
 let commands = document.querySelector('.commands');
 
-arch = () => commands.innerText = "sudo pacman -S bspwm sxhkdo feh maim xclip picom ttf-font-awesome  " ;
+arch = () => commands.innerText = "sudo pacman -S bspwm sxhkdo rofi  feh maim xclip picom ttf-font-awesome  " ;
 
-deb = () => commands.innerText ="sudo apt install bspwm sxhkd feh maim xclip fonts-font-awesome ";
+deb = () => commands.innerText ="sudo apt install bspwm rofi sxhkd feh maim xclip fonts-font-awesome ";
 
-voidd = () => commands.innerText ="sudo xbps install bspwm sxhkd fehmaim polybar xclip picom font-awesome5 font-awesome  ";
+voidd = () => commands.innerText ="sudo xbps install rofi bspwm sxhkd feh maim polybar xclip picom font-awesome5 font-awesome  ";
 
-fed = () => commands.innerText ="sudo dnf install bspwm sxhkd feh maim xclip picom fontawesome-fonts  ";
+fed = () => commands.innerText ="sudo dnf install  rofi bspwm sxhkd feh maim xclip picom fontawesome-fonts  ";
 
 
