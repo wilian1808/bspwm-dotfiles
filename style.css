@@ -1,11 +1,9 @@
 body {
-  background-color: #fbf6f0  ;
-  font-family: 'Nunito', sans-serif;
-
+  background-color: #fbf6f0;
+  font-family: "Nunito", sans-serif;
   padding: 0px;
   margin: 0px;
   color: #222831;
- 
 }
 
 .flextest {
@@ -20,17 +18,16 @@ h1 {
 }
 
 .Coverimg {
-  float:  center;
+  float: center;
   width: 82%;
-      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
-
-    border: 3px solid #bce6eb;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+   0px 6px 6px rgba(0, 0, 0, 0.23);
+  border: 3px solid #bce6eb;
 }
 
 .cover {
-
   display: flex;
-    padding: 0% 5% 0% 5%;
+  padding: 0% 5% 0% 5%;
   justify-content: center;
 }
 
@@ -45,69 +42,64 @@ h1 {
 
 .disclaimer {
   display: inline;
-  border: 2px solid   #222831 ; 
-  padding: 2%; 
+  border: 2px solid #222831;
+  padding: 2%;
+}
 
- 
-  }
+.captions {
+  padding-left: 13%;
+  padding-right: 13%;
+  font-size: 1.4vw;
+}
 
-  
-  .captions {
-    padding-left: 13%;
-  padding-right: 13%; 
-   font-size: 1.4vw; 
-  } 
-
-  .commands {
-  padding: 2%; 
+.commands {
+  padding: 2%;
   margin-top: 2%;
   margin-left: 13%;
-   margin-right: 13%;
-    background-color: #222831 ;
-    color:  white;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); 
+  margin-right: 13%;
+  background-color: #222831;
+  color: white;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+}
 
-  } 
+.distroBtns {
+  display: flex;
+  justify-content: center;
+}
+
+.btns {
+  background-color: #fcdada;
+  border: 2px solid #222831;
+  padding: 1%;
+  outline: none;
+  margin-left: 2%;
+}
+
+.btns:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.sx {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
+.sxx {
+  border: 3px solid #f9813a;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.vidFlex {
+  display: flex;
+  justify-content: center;
+}
+
+.vid {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19),
+    0px 6px 6px rgba(0, 0, 0, 0.23);
+}
 
 
-  .distroBtns {
-    display: flex;
-    justify-content: center;
-  }
-
-  .btns {
-    background-color: #fcdada ;
-    border: 2px solid #222831;
-    padding: 1%;
-    outline: none; 
-   
- 
-    margin-left: 2%;
-  }
-
-  .btns:hover {
-        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); 
-  }
-
-  .sx {
-    margin-top: 3%;
-    display: flex; 
-    justify-content: center;
-     
-
-  }
-  .sxx {
-       border: 3px solid #f9813a ;
-           box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
-  }
-
-
-  .vidFlex {
-    display:  flex;
-    justify-content: center ;
-  }
-
-  .vid {
-          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
-
-  }

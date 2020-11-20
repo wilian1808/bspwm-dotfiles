@@ -1,101 +1,166 @@
 <html>
   <head>
-    <title> bspwm tutorial</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <title>bspwm tutorial</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-    <div class="flextest"> 
+    <div class="flextest">
       <div class="content">
-        <h1> Bspwm Tutorial </h1>
-          <div class="cover"> <img class="Coverimg" src="screenshots/cover.png">  </div>
+        <h1>Bspwm Tutorial</h1>
+        <div class="cover">
+          <img class="Coverimg" src="screenshots/cover.png" />
+        </div>
 
-          <div class="mainContent">
-      <p class="disclaimer">  This tutorial is clearly aimed for beginners only for getting started with window managers and I apologize for not making 
-          this in my github repo's readme since I dont know how to make the readme look non-messy/clean , to go on with this tutorial
-          you will need my configs and those are in this <a href="https://github.com/siduck76/bspwm-dotfiles ">repo. </a> </p>
-          </div>
-
-
-
-          <div class="steps"> 
-            <h1>Installing and setting up bspwm </h1>
-            <p class="captions"> bspwm is simple , it just needs 2 config files :  1) bspwmrc 2) sxhkdrc . Install the packages for your distro : </p> 
-
-            <div class="distroBtns"> 
-              <button onclick="arch();" class="btns" type="button"> Arch based </button>
-              <button onclick="deb();"  class="btns"  type="button"> Debian based</button>
-              <button  onclick="fed();"  class="btns" type="button"> fedora </button>
-              <button onclick="voidd();"  class="btns"  type="button"> void </button>
-
-            </div> 
-            <p class="commands"> sudo pacman -S feh bspwm sxhkd maim xclip picom ttf-font-awesome  
+        <div class="mainContent">
+          <p class="disclaimer">
+            This tutorial is clearly aimed for beginners only for getting
+            started with window managers and I apologize for not making this in
+            my github repo's readme since I dont know how to make the readme
+            look non-messy/clean , to go on with this tutorial you will need my
+            configs and those are in this
+            <a href="https://github.com/siduck76/bspwm-dotfiles ">repo. </a>
           </p>
-            
+        </div>
+
+        <div class="steps">
+          <h1>Installing and setting up bspwm</h1>
+          <p class="captions">
+            bspwm is simple , it just needs 2 config files : 1) bspwmrc 2)
+            sxhkdrc . Install the packages for your distro :
+          </p>
+
+          <div class="distroBtns">
+            <button onclick="arch();" class="btns" type="button">
+              Arch based
+            </button>
+            <button onclick="deb();" class="btns" type="button">
+              Debian based
+            </button>
+            <button onclick="fed();" class="btns" type="button">fedora</button>
+            <button onclick="voidd();" class="btns" type="button">void</button>
           </div>
-                  <p class="captions"> clone my repo for the configs :  </p> 
-                  <p class="commands"> git clone https://github.com/siduck76/bspwm-dotfiles  </p>
-                  <br>
-                  <p class="captions" > Oki so to run bspwm you need two files : bspwmrc and sxhkd . bspwmrc file is needed for 
-                  auto-starting apps , like if you want browser to open up straight after you start up system then you have to 
-                  put the browser's run command in the bspwmrc file , like for firefox you would have to add firefox & at 
-                  the end of the bspwmrc file !. <br><br> Now the second file which is sxhkdrc is needed for keybinds ( keyboard shortcuts )
-                  like if you want if to open terminal by mod ( windows key ) + enter then you would have to specify it in the 
-                  sxhkdrc file. example : <br> 
-                  <div class="sx"> <img class="sxx" src="screenshots/sx.png"> </div>
-                </p>
-                <br> <br> 
-                <p class="captions"> # Now copy the bspwmrc / sxhkdrc files ( from my repo which you cloned )  </p> 
-                
-                <p class="commands"> mkdir ~/.config/bspwm   &&    mkdir ~/.config/sxhkd <br> <br> 
-                # copy the bspwmrc file to bspwm folder and sxhkdrc file to the sxhkd folder <br> <br>
-                chmod +x bspwmrc ( this is important since it runs whole system ) </p><br> 
-                
-                 <p class="captions"> # apply wallpaper ( feh should be installed )   </p>
-               
-                 <p class="commands"> # put this line below in your bspwmrc <br><br> feh --bg-fill yourwallpaper </p>
-                <br> 
-                 <p class="captions"> # add picom for basic fade and smooth transitions ( be sure that picom package is installed )  </p>
-                           <p class="captions" style="text-align: center;"> without picom</p>
-                 <div class="vidFlex"> 
-                     
-                           <video class="vid" width="74%" controls autoplay > 
-                                   <source  src="gifs/nopic.mp4" type="video/mp4"> <br>
-                           </video>
-                 </div>  
-                 <p class="captions" style="text-align: center;" > with picom</p> <br>
+          <p class="commands">
+            sudo pacman -S feh bspwm sxhkd maim xclip picom ttf-font-awesome
+          </p>
+        </div>
+        <p class="captions">clone my repo for the configs :</p>
+        <p class="commands">
+          git clone https://github.com/siduck76/bspwm-dotfiles
+        </p>
+        <br />
+        <p class="captions">
+          Oki so to run bspwm you need two files : bspwmrc and sxhkd . bspwmrc
+          file is needed for auto-starting apps , like if you want browser to
+          open up straight after you start up system then you have to put the
+          browser's run command in the bspwmrc file , like for firefox you would
+          have to add firefox & at the end of the bspwmrc file !. <br /><br />
+          Now the second file which is sxhkdrc is needed for keybinds ( keyboard
+          shortcuts ) like if you want if to open terminal by mod ( windows key
+          ) + enter then you would have to specify it in the sxhkdrc file.
+          example : <br />
+        </p>
 
-                 <div class="vidFlex">
-                                                      <video class="vid" width="74%"  controls autoplay > 
-                            <source src="gifs/picom.mp4" type="video/mp4"> <br>
-                         </video>
-                </div>  
-                 
+        <div class="sx"><img class="sxx" src="screenshots/sx.png" /></div>
+        <!--    </p> -->
+        <br />
+        <br />
+        <p class="captions">
+          # Now copy the bspwmrc / sxhkdrc files ( from my repo which you cloned
+          )
+        </p>
 
+        <p class="commands">
+          mkdir ~/.config/bspwm && mkdir ~/.config/sxhkd <br />
+          <br />
+          # copy the bspwmrc file to bspwm folder and sxhkdrc file to the sxhkd
+          folder <br />
+          <br />
+          chmod +x bspwmrc ( this is important since it runs whole system )
+        </p>
+        <br />
 
+        <p class="captions"># apply wallpaper ( feh should be installed )</p>
 
-                 <p class="commands"> copy the picom folder from my ( cloned repo  )  to your ~/.config folder , that .config folder 
-                 ends with a dot [ period ] so its hidden , type ctrl + h to view it </p>
-                  <br>
-                  <br>
-                  
-                            <p class="captions"># Now lets look at the sxhkrc file for basic configuration of keyboard shortcuts</p>
-                  <div class="sx"><img class="sxx" src="screenshots/sxh.png"> </div><br>
-                  <p class="captions"># The first two commands in it are for programs , xst is a terminal and rofi is an application
-                  launcher , so pressing Mod + enter will open up xst terminal and so on .The 3rd and 4th commands are for 
-                  reloading the configs , so after every change you make in sxhkrc or bspwmrc file you have to reload their configs! 
-                  just replace xst with any terminal ( from the sxhdkrc file ) you like .</p>
+        <p class="commands">
+          # put this line below in your bspwmrc <br /><br />
+          feh --bg-fill yourwallpaper
+        </p>
+        <br />
+        <p class="captions">
+          # add picom for basic fade and smooth transitions ( be sure that picom
+          package is installed )
+        </p>
+        <p class="captions" style="text-align: center">without picom</p>
+        <div class="vidFlex">
+          <video class="vid" width="74%" controls autoplay>
+            <source src="gifs/nopic.mp4" type="video/mp4" />
+            <br />
+          </video>
+        </div>
+        <p class="captions" style="text-align: center">with picom</p>
+        <br />
 
-                  
+        <div class="vidFlex">
+          <video class="vid" width="74%" controls autoplay>
+            <source src="gifs/picom.mp4" type="video/mp4" />
+            <br />
+          </video>
+        </div>
+
+        <p class="commands">
+          copy the picom folder from my ( cloned repo ) to your ~/.config folder
+          , that .config folder ends with a dot [ period ] so its hidden , type
+          ctrl + h to view it
+        </p>
+        <br />
+        <br />
+
+        <p class="captions">
+          # Now lets look at the sxhkrc file for basic configuration of keyboard
+          shortcuts
+        </p>
+        <div class="sx"><img class="sxx" src="screenshots/sxh.png" /></div>
+        <br />
+        <p class="captions">
+          # The first two commands in it are for programs , xst is a terminal
+          and rofi is an application launcher , so pressing Mod + enter will
+          open up xst terminal and so on .The 3rd and 4th commands are for
+          reloading the configs , so after every change you make in sxhkrc or
+          bspwmrc file you have to reload their configs! just replace xst with
+          any terminal ( from the sxhdkrc file ) you like and the rest of the
+          commands are for controlling brightness and  quit bspwm / restart / closing / kill windows.
+          <br> 
+
+          give a quick reading to the sxhkdrc file and try to figure out the keybinds . Basic keybinds :
+          <br> 
+        </p>
+        <p class="commands" style="font-family: 'Fira Code', monospace;
+"> 
+// Super is the windows key <br> <br>
+Super  + enter  &nbsp;  &emsp;&emsp;  -->  open terminal <br><br>   
+        Super + C  &emsp;   &emsp;&emsp;   &emsp;     -->                 open rofi app launcher <br> <br> 
+        Super + shift + q  &nbsp;   &nbsp;    -->       close windows <br><br> 
+        Super + f    &nbsp;    &emsp;&emsp;    &emsp;&emsp;     -->               fullscreen <br><br>  
+        Super + d     &nbsp;  &emsp;&emsp;&emsp;  &nbsp;&nbsp;  -->                exit fullscreen <br<br>>
+        </p>
       </div>
-    
-    </div> 
+    </div>
+    <br />
+    <br />
+    <div>
+      <p class="captions"></p>
+    </div>
 
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
   </body>
-
 </html>

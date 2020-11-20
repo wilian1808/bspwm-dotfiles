@@ -7,3 +7,5 @@ deb = () => commands.innerText ="sudo apt install bspwm sxhkd feh maim xclip fon
 voidd = () => commands.innerText ="sudo xbps install bspwm sxhkd fehmaim polybar xclip picom font-awesome5 font-awesome  ";
 
 fed = () => commands.innerText ="sudo dnf install bspwm sxhkd feh maim xclip picom fontawesome-fonts  ";
+
+
