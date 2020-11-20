@@ -60,14 +60,37 @@
                  <p class="commands"> # put this line below in your bspwmrc <br><br> feh --bg-fill yourwallpaper </p>
                 <br> 
                  <p class="captions"> # add picom for basic fade and smooth transitions ( be sure that picom package is installed )  </p>
+                           <p class="captions" style="text-align: center;"> without picom</p>
+                 <div class="vidFlex"> 
+                     
+                           <video class="vid" width="74%" controls autoplay > 
+                                   <source  src="gifs/nopic.mp4" type="video/mp4"> <br>
+                           </video>
+                 </div>  
+                 <p class="captions" style="text-align: center;" > with picom</p> <br>
+
+                 <div class="vidFlex">
+                                                      <video class="vid" width="74%"  controls autoplay > 
+                            <source src="gifs/picom.mp4" type="video/mp4"> <br>
+                         </video>
+                </div>  
+                 
+
+
+
                  <p class="commands"> copy the picom folder from my ( cloned repo  )  to your ~/.config folder , that .config folder 
                  ends with a dot [ period ] so its hidden , type ctrl + h to view it </p>
                   <br>
-                  <p class="captions"># Now lets look at the sxhkrc file for basic configuration of keyboard shortcuts</p>
+                  <br>
+                  
+                            <p class="captions"># Now lets look at the sxhkrc file for basic configuration of keyboard shortcuts</p>
                   <div class="sx"><img class="sxx" src="screenshots/sxh.png"> </div><br>
                   <p class="captions"># The first two commands in it are for programs , xst is a terminal and rofi is an application
                   launcher , so pressing Mod + enter will open up xst terminal and so on .The 3rd and 4th commands are for 
-                  reloading the configs , so after every change you make in sxhkrc or bspwmrc file you have to reload their configs!</p>
+                  reloading the configs , so after every change you make in sxhkrc or bspwmrc file you have to reload their configs! 
+                  just replace xst with any terminal ( from the sxhdkrc file ) you like .</p>
+
+                  
       </div>
     
     </div> 

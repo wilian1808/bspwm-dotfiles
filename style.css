@@ -98,4 +98,16 @@ h1 {
   }
   .sxx {
        border: 3px solid #f9813a ;
+           box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+
+  .vidFlex {
+    display:  flex;
+    justify-content: center ;
+  }
+
+  .vid {
+          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+
   }
