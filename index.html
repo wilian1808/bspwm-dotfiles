@@ -81,10 +81,15 @@
         </p>
 
         <p class="commands">
+          
           mkdir ~/.config/bspwm && mkdir ~/.config/sxhkd <br />
           <br />
-          # copy the bspwmrc file to bspwm folder and sxhkdrc file to the sxhkd
+          # copy the bspwmrc file to bspwm folder and sxhkdrc file ( from my git repo if you want or use the default ones ) to the sxhkd
           folder <br />
+          
+          # if you want to use the default bspwmrc and sxhkdrc file then copy it this way : 
+          cp -r /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/ 
+          cp -r /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
           <br />
           chmod +x bspwmrc ( this is important since bspwmrc  runs everything in bspwm )
         </p>
