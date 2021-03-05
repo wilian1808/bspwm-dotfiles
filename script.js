@@ -1,6 +1,6 @@
 let commands = document.querySelector('.commands');
 
-arch = () => commands.innerText = "sudo pacman -S bspwm sxhkdo rofi  feh maim xclip picom ttf-font-awesome  " ;
+arch = () => commands.innerText = "sudo pacman -S bspwm sxhkd rofi  feh maim xclip picom ttf-font-awesome  " ;
 
 deb = () => commands.innerText ="sudo apt install bspwm rofi sxhkd feh maim xclip fonts-font-awesome ";
 
